@@ -18,6 +18,7 @@ function Product() {
 
   const addToCart = (product) => {
     setCartItem((prevCartItem) => [...prevCartItem, product]);
+    alert(" Prouduct is added" );
   };
   
   const removeFromCart =(itemId) =>{

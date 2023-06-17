@@ -26,6 +26,9 @@ function Cart({ cartItems,removeFromCart }) {
                         src={item.image}
                         alt='Card image cap'
                       />
+                      <br>
+                      </br>
+                      <br></br>
                         <button onClick={() => handleRemove(item.id)}>
                   Remove Product
                 </button>
@@ -34,6 +37,7 @@ function Cart({ cartItems,removeFromCart }) {
           ) : (
             <li>No items in the cart</li>
           )}
+          <br></br>
         </ul>
         <button>Pay {calculateTotalPrice()}$</button>
       </div>
