@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cart({ cartItems }) {
+function Cart({ cartItems,removeFromCart }) {
   const calculateTotalPrice = () => {
     let totalPrice = 0;
     cartItems.forEach((item) => {
@@ -8,6 +8,10 @@ function Cart({ cartItems }) {
     });
     return totalPrice;
   };
+ 
+  const handleRemove = (itemId) => {
+    removeFromCart(itemId);
+  }
 
   return (
     <> 
@@ -17,11 +21,14 @@ function Cart({ cartItems }) {
           {cartItems && cartItems.length > 0 ? (
             cartItems.map((item) => (
               <li key={item.id}>
-                {item.title} - ${item.price} - <img
+                {item.title}  ${item.price}  <img
                         className='card-img-top'
                         src={item.image}
                         alt='Card image cap'
                       />
+                        <button onClick={() => handleRemove(item.id)}>
+                  Remove Product
+                </button>
               </li>
             ))
           ) : (

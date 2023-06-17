@@ -19,6 +19,11 @@ function Product() {
   const addToCart = (product) => {
     setCartItem((prevCartItem) => [...prevCartItem, product]);
   };
+  
+  const removeFromCart =(itemId) =>{
+  const updatedCart = cartItem.filter((item) => item.id !== itemId);
+  setCartItem(updatedCart);
+  }
 
   return (
     <Router>
@@ -46,7 +51,7 @@ function Product() {
                         <h5 className='card-title'>{item.title}</h5>
                         <h4 className='card-title'>Price: {item.price}$</h4>
                         <button onClick={() => addToCart(item)}>
-                          Buy Now
+                          Add To Cart
                         </button>
                         
                       </div>
@@ -56,7 +61,7 @@ function Product() {
               </div>
             }
           />
-          <Route path='/cart' element={<Cart cartItems={cartItem} />} />
+          <Route path='/cart' element={<Cart cartItems={cartItem} removeFromCart={removeFromCart}  />} />
         </Routes>
       </div>
 

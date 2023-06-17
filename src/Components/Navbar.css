@@ -1,0 +1,36 @@
+nav {
+    background-color: #e5e5e5;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li  {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav li :hover {
+    border-bottom: 2px solid black;
+    background-color: #d9d9d9;
+  }
+  
+  nav .right {
+    margin-left: auto;
+  }
+  

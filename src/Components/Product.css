@@ -51,4 +51,10 @@
   button:hover {
     background-color: #0056b3;
   }
-  
+
+  .Cart {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+  }
